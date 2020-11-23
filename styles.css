@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*---------------------------js--------------------------------- */
+
+.nav-colored {
+    background-color: #fff;
+    color: #222;
+}
+
+
+/*-------------x--------------js------------------x--------------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0 20px;
+    overflow-x: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    height: 100vh;
+    background-image: url(images/header_image.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    z-index: 1;
+}
+
+header::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: -1;
+}
+
+header nav {
+    border-bottom: 1px solid #e7e7e7;
+    width: 100%;
+    position: fixed;
+}
+
+header .logo {
+    color: rgba(255, 255, 255, .7);
+    letter-spacing: 0.5em;
+    float: left;
+    padding: 20px 50px;
+    font-weight: 700;
+}
+
+header nav ul {
+    float: right;
+    padding: 20px 0;
+}
+
+header nav ul li {
+    float: left;
+    list-style: none;
+    padding: 0px 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+header nav ul li:first-child a {
+    color: yellowgreen;
+}
+
+header nav ul li:last-child a {
+    padding-right: 80px;
+}
+
+.show-case .header-text .header-text-main {
+    color: #fff;
+    font-size: 100px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.show-case .header-text .header-text-sub {
+    color: rgba(255, 255, 255, .7);
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+.show-case {
+    text-align: center;
+}
+
+.show-case .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.show-case .header-text .show-case-button {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 100px;
+    background-color: yellowgreen;
+    color: #fff;
+    transition: all .5s;
+}
+
+.show-case .header-text .show-case-button:hover {
+    background-color: limegreen;
+}
+
+.visible-hamburger {
+    /* visibility: visible; */
+    visibility: visible !important;
+}
+
+
+/* 
+header .show-case .hamburger {
+   
+} */
+
+header .show-case .hamburger ul {
+    position: fixed;
+    right: 30px;
+    top: 10%;
+    visibility: hidden;
+}
+
+header .show-case .hamburger ul li {
+    list-style: none;
+    padding: 10px 20px;
+    border: 2px solid #e7e7e7;
+    border-radius: 100px;
+    background-color: transparent;
+    margin-top: 20px;
+    transition: all .3s;
+}
+
+header .show-case .hamburger ul li a {
+    text-decoration: none;
+    color: fuchsia;
+}
+
+header .show-case .hamburger ul li:hover {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+header .show-case .hamburger-2 {
+    position: fixed;
+    width: 50px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    right: 70px;
+    top: 2%;
+    visibility: hidden;
+}
+
+header .show-case .hamburger-2 .h {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .show-case .hamburger-2 .h-1,
+header .show-case .hamburger-2 .h-2,
+header .show-case .hamburger-2 .h-3 {
+    width: 100%;
+    border: 2px solid #e7e7e7;
+    border-radius: 10px;
+}
+
+header .show-case .hamburger-2 .h-2 {
+    margin: 4px 0;
+}
+
+#about-us {
+    background-color: yellowgreen;
+    padding: 70px 0;
+    text-align: center;
+}
+
+#about-us .main-text h2 {
+    font-size: 30px;
+    font-weight: 50;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#about-us .sub-text p {
+    line-height: 1.5;
+    max-width: 70%;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, .7);
+}
+
+#about-us .icon {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+#content {
+    padding: 100px 70px;
+}
+
+#content .main-image {
+    max-width: 50%;
+    float: left;
+}
+
+#content .main-image img {
+    width: 500px;
+    height: 350px;
+    border-radius: 100%;
+}
+
+#content .main-text {
+    max-width: 50%;
+    float: right;
+    margin: 20px 0;
+}
+
+#content .main-text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #333333;
+    font-weight: 500;
+}
+
+#content .main-text p {
+    line-height: 1.4;
+    color: #777;
+    font-weight: 300;
+    margin-bottom: 35px;
+    font-size: 21px;
+}
+
+#content .main-text .content-button {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 100px;
+    background-color: yellowgreen;
+    color: #fff;
+    transition: all .5s;
+}
+
+#content .main-text .content-button:hover {
+    background-color: limegreen;
+}
+
+#content-2 {
+    padding: 100px 70px;
+    background-color: #222222;
+}
+
+#content-2 .main-image {
+    max-width: 50%;
+    float: right;
+}
+
+#content-2 .main-image img {
+    width: 500px;
+    height: 350px;
+    border-radius: 100%;
+}
+
+#content-2 .main-text {
+    max-width: 50%;
+    float: left;
+    margin: 20px 0;
+}
+
+#content-2 .main-text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 500;
+}
+
+#content-2 .main-text p {
+    line-height: 1.4;
+    color: #BDBDBD;
+    font-weight: 300;
+    margin-bottom: 35px;
+    font-size: 21px;
+}
+
+#content-2 .main-text .content-button {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 100px;
+    background-color: #EEEEEE;
+    color: #222222;
+    transition: all .5s;
+}
+
+#content-2 .main-text .content-button:hover {
+    background-color: rgba(238, 238, 238, 0.911);
+    color: #222;
+}
+
+#promo-item {
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#promo-item .item-1,
+#promo-item .item-2,
+#promo-item .item-3 {
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+#promo-item .item-1 {
+    background-image: url(images/microphone-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#promo-item .item-2 {
+    background-image: url(images/microphone-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#promo-item .item-3 {
+    background-image: url(images/microphone-4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#promo-item .item-1 h3,
+#promo-item .item-2 h3,
+#promo-item .item-3 h3 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#promo-item .item-1:hover,
+#promo-item .item-2:hover,
+#promo-item .item-3:hover {
+    background-size: 110%;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+}
+
+#content-3 .content-3-button {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 100px;
+    background-color: yellowgreen;
+    color: #fff;
+    transition: all .5s;
+}
+
+#content-3 {
+    padding: 70px 0;
+    text-align: center;
+}
+
+#content-3 .icon {
+    font-size: 60px;
+    color: #9ACD32;
+    margin-bottom: 5px;
+}
+
+#content-3 .main-text h2 {
+    font-size: 30px;
+    font-weight: 50;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+#content-3 .sub-text p {
+    line-height: 1.5;
+    max-width: 70%;
+    margin: 0 auto;
+    color: #777777;
+    font-size: 21px;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+#content-3 .content-button {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 100px;
+    background-color: yellowgreen;
+    color: #fff;
+    transition: all .5s;
+}
+
+#content-3 .content-3-button:hover {
+    background-color: limegreen;
+}
+
+#contact {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #9ACD32;
+    color: #fff;
+}
+
+#contact h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#contact .icon {
+    font-size: 32px;
+}
+
+#contact p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+#footer {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: #333;
+}
+
+@media(max-width: 610px) {
+    .show-case .header-text .header-text-main {
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 580px) {
+    header nav ul {
+        display: none;
+    }
+    header .show-case .hamburger-2 {
+        visibility: visible;
+    }
+}
+
+@media(max-width: 1219px) {
+    #content .main-image,
+    #content .main-text,
+    #content-2 .main-text {
+        max-width: 100%;
+    }
+    #content-2 .main-image {
+        float: none;
+    }
+}
+
+@media(max-width: 679px) {
+    #content .main-image img {
+        max-width: 100%;
+        border-radius: 50px;
+    }
+    #content-2 .main-image img {
+        max-width: 200%;
+        border-radius: 50px;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 349px) {
+    #content .main-text .content-button,
+    #content-2 .main-text .content-button {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    #content .main-text p,
+    #content-2 .main-text p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 768px) {
+    #promo-item .item-1,
+    #promo-item .item-2,
+    #promo-item .item-3 {
+        width: 100%;
+    }
+    #content-3 .icon {
+        margin-top: 50px;
+    }
+}
